@@ -2,6 +2,7 @@ $yellow: #fed136;
 $blue: #0048bd;
 $black: #31393c;
 $grey: #6c757d;
+$light-grey: #dddddd;
 
 * {
     box-sizing: border-box;
@@ -134,6 +135,7 @@ section {
     display: flex;
     align-items: center;
     position: relative;
+    margin-bottom: 40px;
 
     &:after {
         content:"";
@@ -235,4 +237,20 @@ section {
         width: 48%;
     }
 
+}
+
+.feature-row {
+    display: flex;
+    flex-wrap: wrap;
+
+    .feature {
+        width: calc(100%/3);
+        padding: 15px;
+    
+        .feature-number {
+            font-size: 4rem;
+            font-weight: 200;
+            color: $light-grey;
+        }
+    }
 }
