@@ -10,6 +10,7 @@ let mix = require('laravel-mix');
  | file for your application, as well as bundling up your JS files.
  |
  */
+mix.setPublicPath("./");
 
 mix
     .js('src/js/app.js', 'dist/')
@@ -40,7 +41,7 @@ mix
 // mix.minify(file);
 // mix.sourceMaps(); // Enable sourcemaps
 // mix.version(); // Enable versioning.
-// mix.disableNotifications();
+mix.disableNotifications();
 // mix.setPublicPath('path/to/public');
 // mix.setResourceRoot('prefix/for/resource/locators');
 // mix.autoload({}); <-- Will be passed to Webpack's ProvidePlugin.
