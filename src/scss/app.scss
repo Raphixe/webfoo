@@ -81,6 +81,81 @@ section {
             color: $black;
         }
     }
+
+    &.secondary {
+        padding: 0;
+        background-color: $blue;
+        display: flex;
+        .slider-content {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
+            &:after {
+                content: "";
+                right: -20px;
+                top: 0;
+                bottom: 0;
+                border-right: 50px dashed $blue;
+                position: absolute;
+                transform: skewX(2deg);
+                z-index: 1;
+            }
+        }
+
+        .section-header {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem;
+            margin-bottom: 0;
+        }
+        .slider-controls {
+            // border: 1px solid rgba(255,255,255,0.4);;
+            width: 120px;
+            display: flex;
+            flex-wrap: nowrap;
+            margin-left: auto;
+            z-index: 2;
+        }
+        .slider-btn {
+            width: 60px;
+            height: 60px;
+            color: white;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+
+            &:hover {
+                background-color: $yellow;
+                color: $black;
+            }
+            
+            &.left {
+                border-right: 1px solid $yellow;
+            }
+            &.right {
+                border-left: 1px solid $yellow;
+            }
+        }
+
+
+        h2, .sub-header {
+            color: white;
+        }
+
+        .slider-image {
+            width: 50%;
+            background-image: url(https://images.unsplash.com/photo-1542294360-2ac1e8a9cbfa?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5be83e366af0e9be572796318b3685c0&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb);
+            background-size: cover;
+            height: 500px;
+        }
+    }
 }
 
 .site-nav {
@@ -244,13 +319,27 @@ section {
     flex-wrap: wrap;
 
     .feature {
-        width: calc(100%/3);
-        padding: 15px;
+        width: calc(100%/3.3);
+        padding: 2rem;
+        margin: 0 1rem 4rem 1rem;
+        box-shadow: 1px 56px 84px -61px rgba(0,0,0,0.22);
+        background-color: white;
+        border: 5px solid transparent;
+        transition: border-color .5s;
     
+        &:hover {
+            border-color: $yellow;
+
+            .feature-number {
+                color: $yellow;
+            }
+        }
+
         .feature-number {
             font-size: 4rem;
             font-weight: 200;
             color: $light-grey;
-        }
+            transition: color .5s;
+            }
     }
 }
