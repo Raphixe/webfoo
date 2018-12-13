@@ -3,6 +3,7 @@ $blue: #0048bd;
 $black: #31393c;
 $grey: #6c757d;
 $light-grey: #dddddd;
+$white: #ffffff;
 
 @keyframes number-card {
     0% {
@@ -423,4 +424,55 @@ section {
             transition: color .5s;
             }
     }
+}
+footer {
+    background-color: $black;
+    color: $white;
+    padding: 1rem 0;
+
+    .footer {
+
+        ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+    
+    
+            li {
+                padding: 0 1rem;
+    
+                a {
+                    color: white;
+                    text-decoration: none;
+    
+                    &:hover {
+                        color: $yellow;
+                    }
+                }
+            }
+    
+            p {
+    
+            }
+    
+            
+        }
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+            margin-bottom: 0;
+         
+            a {
+                color: $white;
+                font-weight: bold;
+                font-size: 1.55rem;
+                font-style: italic;
+            }
+        }
+    }
+
+    
 }
